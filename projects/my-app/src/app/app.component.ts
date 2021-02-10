@@ -10,7 +10,8 @@ export class AppComponent implements OnInit {
   title = "my-app";
   constructor(private appService: AppService) {}
   ngOnInit() {
-    this.appService.get({}).subscribe((data) => {
+    const paramObj = {};
+    this.appService.get(paramObj).subscribe((data) => {
       console.log(data);
     });
   }
